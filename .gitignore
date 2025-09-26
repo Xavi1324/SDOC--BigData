@@ -1,1 +1,13 @@
 **/.vs/
+# Ignorar archivos temporales de Office
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+*.tmp
+
+*.doc
+*.docx
+*.dot
+*.dotx
+~$*.doc*
+*.tmp
