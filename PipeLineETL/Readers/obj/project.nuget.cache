@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DQVxCS72e78=",
+  "dgSpecHash": "IFIt8TDyJqY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\xavie\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de Análisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Readers.csproj",
+  "projectFilePath": "C:\\Proyecto\\Sistema de Análisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Readers.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xavie\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\xavie\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

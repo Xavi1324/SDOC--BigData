@@ -11,7 +11,7 @@ namespace Readers
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("=== Lector de Archivos (Extract -> Print -> Transform -> Save -> Load DW) ===");
+            Console.WriteLine("=== Lector de Archivos (Extract -> Transform -> Save) ===");
 
             string basePath = @"C:\Proyecto\Archivo CSV Análisis de Opiniones de Clientes-20250923";
             string outputPath = Path.Combine(basePath, "output");
@@ -22,15 +22,14 @@ namespace Readers
                 return;
             }
 
-            
             if (!Directory.Exists(outputPath))
                 Directory.CreateDirectory(outputPath);
 
             var transformer = new TransformService();
 
             
-            var connStrDw = "Server = (localdb)\\LaptopXavier;Database=OpinionesClientesDW;Trusted_Connection=True;TrustServerCertificate=True;";
-            var dw = new DwLoader(connStrDw);
+             var connStrDw = "Server = (localdb)\\LaptopXavier;Database=OpinionesClientesDW;Trusted_Connection=True;TrustServerCertificate=True;";
+             var dw = new DwLoader(connStrDw);
 
             while (true)
             {
@@ -81,6 +80,7 @@ namespace Readers
 
                 var reader = new Reader(fullPath);
 
+                
                 switch (fileKey)
                 {
                     case "clients": reader.ReadFile<ClientCsv>(); break;
@@ -95,6 +95,7 @@ namespace Readers
                         continue;
                 }
 
+                
                 switch (fileKey)
                 {
                     case "clients":
@@ -106,9 +107,10 @@ namespace Readers
                             SaveCsv(outPath, res.Clean);
                             PrintTransformSummary("Clients", raw.Count, res.Clean.Count, res.Invalid.Count);
 
+                            
                             await dw.LoadClientsAsync(res.Clean);
 
-                            Console.WriteLine($"Cargado a DW: {res.Clean.Count} clientes.\nSalida: {outPath}");
+                            Console.WriteLine($"Transformación completada (clients). Salida: {outPath}");
                             break;
                         }
                     case "fuente_datos":
@@ -120,9 +122,10 @@ namespace Readers
                             SaveCsv(outPath, res.Clean);
                             PrintTransformSummary("DataSource", raw.Count, res.Clean.Count, res.Invalid.Count);
 
-                            await dw.LoadDataSourcesAsync(res.Clean);
+                            
+                             await dw.LoadDataSourcesAsync(res.Clean);
 
-                            Console.WriteLine($"Cargado a DW: {res.Clean.Count} fuentes de datos.\nSalida: {outPath}");
+                            Console.WriteLine($"Transformación completada (fuente_datos). Salida: {outPath}");
                             break;
                         }
                     case "products":
@@ -134,9 +137,10 @@ namespace Readers
                             SaveCsv(outPath, res.Clean);
                             PrintTransformSummary("Products", raw.Count, res.Clean.Count, res.Invalid.Count);
 
+                            
                             await dw.LoadProductsAsync(res.Clean);
 
-                            Console.WriteLine($"Cargado a DW: {res.Clean.Count} productos.\nSalida: {outPath}");
+                            Console.WriteLine($"Transformación completada (products). Salida: {outPath}");
                             break;
                         }
                     case "social_comments":
@@ -144,6 +148,7 @@ namespace Readers
                             var raw = reader.ReadAll<SocialCommentCsv>();
                             var cleaned = transformer.CleanSocialComments(raw);
 
+                            
                             var productsRaw = new Reader(Path.Combine(basePath, "products.csv")).ReadAll<ProductCsv>();
                             var productsCleanList = transformer.CleanProducts(productsRaw).Clean.ToList();
                             var productsCleanSet = productsCleanList.Select(p => p.IdProducto).ToHashSet();
@@ -158,11 +163,12 @@ namespace Readers
                             SaveCsv(outPath, validated.Clean);
                             PrintTransformSummary("SocialComments", raw.Count, validated.Clean.Count, cleaned.Invalid.Count + validated.Invalid.Count);
 
+                            
                             await dw.LoadProductsAsync(productsCleanList);
                             await dw.LoadClientsAsync(clientsCleanList);
                             await dw.LoadOpinionsFromSocialAsync(validated.Clean, productsCleanList, clientsCleanList);
 
-                            Console.WriteLine($"Cargado a DW: {validated.Clean.Count} opiniones (social).\nSalida: {outPath}");
+                            Console.WriteLine($"Transformación completada (social_comments). Salida: {outPath}");
                             break;
                         }
                     case "surveys_part1":
@@ -184,11 +190,13 @@ namespace Readers
                             SaveCsv(outPath, validated.Clean);
                             PrintTransformSummary("Surveys", raw.Count, validated.Clean.Count, cleaned.Invalid.Count + validated.Invalid.Count);
 
+                            
                             await dw.LoadProductsAsync(productsCleanList);
                             await dw.LoadClientsAsync(clientsCleanList);
                             await dw.LoadOpinionsFromSurveysAsync(validated.Clean, productsCleanList, clientsCleanList);
 
-                            Console.WriteLine($"Cargado a DW: {validated.Clean.Count} opiniones (surveys).\nSalida: {outPath}");
+
+                            Console.WriteLine($"Transformación completada (surveys_part1). Salida: {outPath}");
                             break;
                         }
                     case "web_reviews":
@@ -210,11 +218,13 @@ namespace Readers
                             SaveCsv(outPath, validated.Clean);
                             PrintTransformSummary("WebReviews", raw.Count, validated.Clean.Count, cleaned.Invalid.Count + validated.Invalid.Count);
 
+                            
                             await dw.LoadProductsAsync(productsCleanList);
                             await dw.LoadClientsAsync(clientsCleanList);
                             await dw.LoadOpinionsFromWebReviewsAsync(validated.Clean, productsCleanList, clientsCleanList);
 
-                            Console.WriteLine($"Cargado a DW: {validated.Clean.Count} opiniones (web).\nSalida: {outPath}");
+
+                            Console.WriteLine($"Transformación completada (web_reviews). Salida: {outPath}");
                             break;
                         }
                 }
@@ -224,6 +234,7 @@ namespace Readers
         }
 
         
+
         static void MostrarMenu(string[] files)
         {
             Console.WriteLine("\nArchivos encontrados:");
@@ -258,7 +269,7 @@ namespace Readers
         static string GetOutputPath(string outputDir, string originalFileName)
         {
             var name = Path.GetFileNameWithoutExtension(originalFileName);
-            var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmm"); 
+            var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmm");
             return Path.Combine(outputDir, $"{name}_clean_{timestamp}.csv");
         }
 

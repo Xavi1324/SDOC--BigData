@@ -1,110 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\",
+  "WorkspaceRootPath": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\services\\dwloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\services\\dwloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\staging\\opinioninput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\staging\\opinioninput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\dw\\fuente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\dw\\fuente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\dw\\tipofuente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\dw\\tipofuente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\dw\\tiempodw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\dw\\tiempodw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\dw\\clientedw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\dw\\clientedw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\dw\\productodw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\dw\\productodw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\dw\\clasificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\dw\\clasificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\dw\\pais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\dw\\pais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\dw\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\dw\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\csv\\clientcsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\csv\\clientcsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\csv\\productcsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\csv\\productcsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\staging\\webreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\staging\\webreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\staging\\survey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\staging\\survey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\staging\\socialcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\staging\\socialcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\staging\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\staging\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\staging\\datasource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\staging\\datasource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\staging\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\staging\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\services\\reader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\services\\reader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\csv\\webreviewcsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\csv\\webreviewcsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\csv\\surveycsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\csv\\surveycsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\csv\\socialcommentcsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\csv\\socialcommentcsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\csv\\datasourcecsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\csv\\datasourcecsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\proyecto\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\services\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\proyecto\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\services\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\services\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\users\\xavie\\onedrive - instituto tecnol\u00F3gico de las am\u00E9ricas (itla)\\itla\\octavo cuatri\\electiva 1\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\readers.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\readers.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\proyecto\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\services\\dwloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\services\\dwloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -114,347 +22,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OpinionInput.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Staging\\OpinionInput.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Staging\\OpinionInput.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Staging\\OpinionInput.cs",
-              "RelativeToolTip": "Readers\\Models\\Staging\\OpinionInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T03:37:02.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TiempoDw.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Dw\\TiempoDw.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Dw\\TiempoDw.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Dw\\TiempoDw.cs",
-              "RelativeToolTip": "Readers\\Models\\Dw\\TiempoDw.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T03:31:15.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClienteDw.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Dw\\ClienteDw.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Dw\\ClienteDw.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Dw\\ClienteDw.cs",
-              "RelativeToolTip": "Readers\\Models\\Dw\\ClienteDw.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T03:31:04.998Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProductoDw.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Dw\\ProductoDw.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Dw\\ProductoDw.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Dw\\ProductoDw.cs",
-              "RelativeToolTip": "Readers\\Models\\Dw\\ProductoDw.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T03:30:54.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Clasificacion.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Dw\\Clasificacion.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Dw\\Clasificacion.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Dw\\Clasificacion.cs",
-              "RelativeToolTip": "Readers\\Models\\Dw\\Clasificacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T03:30:44.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Fuente.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Dw\\Fuente.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Dw\\Fuente.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Dw\\Fuente.cs",
-              "RelativeToolTip": "Readers\\Models\\Dw\\Fuente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T03:30:27.801Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TipoFuente.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Dw\\TipoFuente.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Dw\\TipoFuente.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Dw\\TipoFuente.cs",
-              "RelativeToolTip": "Readers\\Models\\Dw\\TipoFuente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T03:30:18.137Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Pais.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Dw\\Pais.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Dw\\Pais.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Dw\\Pais.cs",
-              "RelativeToolTip": "Readers\\Models\\Dw\\Pais.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T03:30:08.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Dw\\Categoria.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Dw\\Categoria.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Dw\\Categoria.cs",
-              "RelativeToolTip": "Readers\\Models\\Dw\\Categoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T03:29:51.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Client.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Staging\\Client.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Staging\\Client.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Staging\\Client.cs",
-              "RelativeToolTip": "Readers\\Models\\Staging\\Client.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T03:23:44.444Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ClientCsv.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\ClientCsv.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Csv\\ClientCsv.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\ClientCsv.cs",
-              "RelativeToolTip": "Readers\\Models\\Csv\\ClientCsv.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "DwLoader.cs",
+              "DocumentMoniker": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Services\\DwLoader.cs",
+              "RelativeDocumentMoniker": "Readers\\Services\\DwLoader.cs",
+              "ToolTip": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Services\\DwLoader.cs",
+              "RelativeToolTip": "Readers\\Services\\DwLoader.cs",
+              "ViewState": "AgIAACUBAAAAAAAAAAAswNcBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T23:54:05.517Z",
+              "WhenOpened": "2025-09-26T21:22:20.7Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DwLoader.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Services\\DwLoader.cs",
-              "RelativeDocumentMoniker": "Readers\\Services\\DwLoader.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Services\\DwLoader.cs",
-              "RelativeToolTip": "Readers\\Services\\DwLoader.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAcwHcAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T03:32:17.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "SurveyCsv.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\SurveyCsv.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Csv\\SurveyCsv.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\SurveyCsv.cs",
-              "RelativeToolTip": "Readers\\Models\\Csv\\SurveyCsv.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T23:54:17.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "WebReviewCsv.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\WebReviewCsv.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Csv\\WebReviewCsv.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\WebReviewCsv.cs",
-              "RelativeToolTip": "Readers\\Models\\Csv\\WebReviewCsv.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T23:54:21.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Reader.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Services\\Reader.cs",
-              "RelativeDocumentMoniker": "Readers\\Services\\Reader.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Services\\Reader.cs",
-              "RelativeToolTip": "Readers\\Services\\Reader.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T23:53:23.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "DataSource.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Staging\\DataSource.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Staging\\DataSource.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Staging\\DataSource.cs",
-              "RelativeToolTip": "Readers\\Models\\Staging\\DataSource.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T03:24:01.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Staging\\Product.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Staging\\Product.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Staging\\Product.cs",
-              "RelativeToolTip": "Readers\\Models\\Staging\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T03:24:08.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "SocialComment.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Staging\\SocialComment.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Staging\\SocialComment.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Staging\\SocialComment.cs",
-              "RelativeToolTip": "Readers\\Models\\Staging\\SocialComment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T03:24:13.679Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "WebReview.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Staging\\WebReview.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Staging\\WebReview.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Staging\\WebReview.cs",
-              "RelativeToolTip": "Readers\\Models\\Staging\\WebReview.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T03:24:23.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Survey.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Staging\\Survey.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Staging\\Survey.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Staging\\Survey.cs",
-              "RelativeToolTip": "Readers\\Models\\Staging\\Survey.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T03:24:18.653Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ProductCsv.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\ProductCsv.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Csv\\ProductCsv.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\ProductCsv.cs",
-              "RelativeToolTip": "Readers\\Models\\Csv\\ProductCsv.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T23:54:00.696Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "SocialCommentCsv.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\SocialCommentCsv.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Csv\\SocialCommentCsv.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\SocialCommentCsv.cs",
-              "RelativeToolTip": "Readers\\Models\\Csv\\SocialCommentCsv.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T23:54:14.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "DataSourceCsv.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\DataSourceCsv.cs",
-              "RelativeDocumentMoniker": "Readers\\Models\\Csv\\DataSourceCsv.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\DataSourceCsv.cs",
-              "RelativeToolTip": "Readers\\Models\\Csv\\DataSourceCsv.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T23:54:09.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Transform.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Services\\Transform.cs",
-              "RelativeDocumentMoniker": "Readers\\Services\\Transform.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Services\\Transform.cs",
-              "RelativeToolTip": "Readers\\Services\\Transform.cs",
-              "ViewState": "AgIAAOMAAAAAAAAAAAAAAAsBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T02:57:07.718Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Readers.csproj",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Readers.csproj",
-              "RelativeDocumentMoniker": "Readers\\Readers.csproj",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Readers.csproj",
-              "RelativeToolTip": "Readers\\Readers.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-24T23:52:01.661Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Program.cs",
+              "DocumentMoniker": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Program.cs",
               "RelativeDocumentMoniker": "Readers\\Program.cs",
-              "ToolTip": "C:\\Users\\xavie\\OneDrive - Instituto Tecnol\u00F3gico de Las Am\u00E9ricas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Program.cs",
+              "ToolTip": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Program.cs",
               "RelativeToolTip": "Readers\\Program.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwB8AAABaAAAAAAAAAA==",
+              "ViewState": "AgIAAAcBAAAAAAAAAAAIwB0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T23:51:53.576Z",
+              "WhenOpened": "2025-09-26T21:13:51.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Transform.cs",
+              "DocumentMoniker": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Services\\Transform.cs",
+              "RelativeDocumentMoniker": "Readers\\Services\\Transform.cs",
+              "ToolTip": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Services\\Transform.cs",
+              "RelativeToolTip": "Readers\\Services\\Transform.cs",
+              "ViewState": "AgIAABEBAAAAAAAAAAAgwGQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T21:10:23.453Z",
               "EditorCaption": ""
             }
           ]

@@ -1652,11 +1652,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xavie\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de Análisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Readers.csproj",
+      "projectUniqueName": "C:\\Proyecto\\Sistema de Análisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Readers.csproj",
       "projectName": "Readers",
-      "projectPath": "C:\\Users\\xavie\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de Análisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Readers.csproj",
+      "projectPath": "C:\\Proyecto\\Sistema de Análisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Readers.csproj",
       "packagesPath": "C:\\Users\\xavie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xavie\\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\\ITLA\\Octavo cuatri\\Electiva 1\\Sistema de Análisis de Opiniones de Clientes\\PipeLineETL\\Readers\\obj\\",
+      "outputPath": "C:\\Proyecto\\Sistema de Análisis de Opiniones de Clientes\\PipeLineETL\\Readers\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
