@@ -4,9 +4,7 @@ using System.Text;
 
 namespace Readers.Services
 {
-    // ----------------------------------------------------------------------
-    // Resultado estándar: no se cambia el contrato que ya usas en tu pipeline
-    // ----------------------------------------------------------------------
+   
     public class TransformResult<T>
     {
         public List<T> Clean { get; set; } = new();
@@ -15,7 +13,7 @@ namespace Readers.Services
 
     public static class TransformHelpers
     {
-        // ---------- Normalización base ----------
+        
         public static string CleanText(string? s) => (s ?? string.Empty).Trim();
 
         public static string ToTitle(string? s)

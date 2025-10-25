@@ -7,11 +7,9 @@ namespace Readers.Models.Csv
         [Name("IdComment")]
         public string IdComment { get; set; } = string.Empty;
 
-        
         [Name("IdCliente")]
         public string? IdCliente { get; set; }
 
-        
         [Name("IdProduct")]
         public string IdProducto { get; set; } = string.Empty;
 

@@ -2,7 +2,7 @@
 
 namespace Readers.Models.Csv
 {
-    public class SurveyCsv
+    public class SurveyCsv 
     {
         [Name("IdOpinion")]
         public int IdOpinion { get; set; }

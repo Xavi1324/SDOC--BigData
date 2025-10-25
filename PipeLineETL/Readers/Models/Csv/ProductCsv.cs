@@ -4,9 +4,11 @@ namespace Readers.Models.Csv
 {
     public class ProductCsv
     {
+        [Name("IdProducto")]
         public int IdProducto { get; set; }
 
-        public string Nombre { get; set; }
+        [Name("Nombre")]
+        public string Nombre { get; set; } = string.Empty;
         [Name("Categoría", "Categoria")]
         public string? Categoria { get; set; }
 

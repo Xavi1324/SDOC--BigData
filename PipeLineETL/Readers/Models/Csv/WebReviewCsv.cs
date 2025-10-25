@@ -2,16 +2,16 @@
 
 namespace Readers.Models.Csv
 {
-    public class WebReviewCsv
+    public class WebReviewCsv 
     {
         [Name("IdReview")]
-        public string IdReview { get; set; } = string.Empty;
+        public  string IdReview { get; set; } = string.Empty;
 
         [Name("IdCliente")]
-        public string IdCliente { get; set; } = string.Empty;  
+        public string IdCliente { get; set; } = string.Empty;
 
         [Name("IdProducto")]
-        public string IdProducto { get; set; } = string.Empty;  
+        public string IdProducto { get; set; } = string.Empty;
 
         [Name("Fecha")]
         public DateTime Fecha { get; set; }

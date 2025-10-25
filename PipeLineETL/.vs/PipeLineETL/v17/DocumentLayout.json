@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\proyecto\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\proyecto\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\services\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\services\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\proyecto\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\csv\\surveycsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\csv\\surveycsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\proyecto\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\csv\\socialcommentcsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\csv\\socialcommentcsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\proyecto\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\proyecto\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\csv\\datasourcecsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\csv\\datasourcecsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\proyecto\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\csv\\productcsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\csv\\productcsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\proyecto\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\services\\dwloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\services\\dwloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\proyecto\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\csv\\webreviewcsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\csv\\webreviewcsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|c:\\proyecto\\sistema de an\u00E1lisis de opiniones de clientes\\pipelineetl\\readers\\models\\csv\\clientcsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{019F05B3-C33C-4706-AFD9-846AA512A979}|Readers\\Readers.csproj|solutionrelative:readers\\models\\csv\\clientcsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,47 +46,121 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WebReviewCsv.cs",
+              "DocumentMoniker": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\WebReviewCsv.cs",
+              "RelativeDocumentMoniker": "Readers\\Models\\Csv\\WebReviewCsv.cs",
+              "ToolTip": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\WebReviewCsv.cs",
+              "RelativeToolTip": "Readers\\Models\\Csv\\WebReviewCsv.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T01:12:31.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SurveyCsv.cs",
+              "DocumentMoniker": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\SurveyCsv.cs",
+              "RelativeDocumentMoniker": "Readers\\Models\\Csv\\SurveyCsv.cs",
+              "ToolTip": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\SurveyCsv.cs",
+              "RelativeToolTip": "Readers\\Models\\Csv\\SurveyCsv.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T01:02:14.464Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "SocialCommentCsv.cs",
+              "DocumentMoniker": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\SocialCommentCsv.cs",
+              "RelativeDocumentMoniker": "Readers\\Models\\Csv\\SocialCommentCsv.cs",
+              "ToolTip": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\SocialCommentCsv.cs",
+              "RelativeToolTip": "Readers\\Models\\Csv\\SocialCommentCsv.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T00:55:56.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductCsv.cs",
+              "DocumentMoniker": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\ProductCsv.cs",
+              "RelativeDocumentMoniker": "Readers\\Models\\Csv\\ProductCsv.cs",
+              "ToolTip": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\ProductCsv.cs",
+              "RelativeToolTip": "Readers\\Models\\Csv\\ProductCsv.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T00:55:15.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataSourceCsv.cs",
+              "DocumentMoniker": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\DataSourceCsv.cs",
+              "RelativeDocumentMoniker": "Readers\\Models\\Csv\\DataSourceCsv.cs",
+              "ToolTip": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\DataSourceCsv.cs",
+              "RelativeToolTip": "Readers\\Models\\Csv\\DataSourceCsv.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T00:52:07.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ClientCsv.cs",
+              "DocumentMoniker": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\ClientCsv.cs",
+              "RelativeDocumentMoniker": "Readers\\Models\\Csv\\ClientCsv.cs",
+              "ToolTip": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Models\\Csv\\ClientCsv.cs",
+              "RelativeToolTip": "Readers\\Models\\Csv\\ClientCsv.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T00:48:02.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "DwLoader.cs",
               "DocumentMoniker": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Services\\DwLoader.cs",
               "RelativeDocumentMoniker": "Readers\\Services\\DwLoader.cs",
               "ToolTip": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Services\\DwLoader.cs",
               "RelativeToolTip": "Readers\\Services\\DwLoader.cs",
-              "ViewState": "AgIAACUBAAAAAAAAAAAswNcBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAkwBIAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-26T21:22:20.7Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Program.cs",
               "RelativeDocumentMoniker": "Readers\\Program.cs",
               "ToolTip": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Program.cs",
               "RelativeToolTip": "Readers\\Program.cs",
-              "ViewState": "AgIAAAcBAAAAAAAAAAAIwB0AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAACIBAAAAAAAAAAAUwNQAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-26T21:13:51.136Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Transform.cs",
               "DocumentMoniker": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Services\\Transform.cs",
               "RelativeDocumentMoniker": "Readers\\Services\\Transform.cs",
               "ToolTip": "C:\\Proyecto\\Sistema de An\u00E1lisis de Opiniones de Clientes\\PipeLineETL\\Readers\\Services\\Transform.cs",
               "RelativeToolTip": "Readers\\Services\\Transform.cs",
-              "ViewState": "AgIAABEBAAAAAAAAAAAgwGQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAIwL8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-26T21:10:23.453Z",
               "EditorCaption": ""

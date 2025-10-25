@@ -160,7 +160,7 @@ SELECT CAST(SCOPE_IDENTITY() AS INT);";
 
             if (_cliCache.TryGetValue(cacheKey, out var cached)) return cached;
 
-            // 1) Buscar por email si existe
+            
             if (!string.IsNullOrWhiteSpace(email))
             {
                 const string selEmail = "SELECT Client_Id FROM dw.Cliente WHERE Email=@Email;";
@@ -269,7 +269,7 @@ SELECT CAST(SCOPE_IDENTITY() AS SMALLINT);";
             return newId;
         }
 
-        /* ===================== Insert Opinion ===================== */
+        
 
         private async Task InsertOpinionIfNotExistsAsync(
             SqlConnection cn, SqlTransaction tx,
@@ -301,7 +301,7 @@ VALUES(@Product_Id, @Client_Id, @Fuente_Id, @Time_Id, @Comment, @Class_Id, @Hash
             }, tx);
         }
 
-        /* ===================== Public Loaders ===================== */
+        
 
         public async Task LoadProductsAsync(IEnumerable<ProductCsv> products)
         {

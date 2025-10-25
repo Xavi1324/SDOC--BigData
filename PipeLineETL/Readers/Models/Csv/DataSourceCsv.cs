@@ -2,7 +2,7 @@
 
 namespace Readers.Models.Csv
 {
-    public class DataSourceCsv
+    public class DataSourceCsv 
     {
         [Name("IdFuente")]
         public string IdFuente { get; set; } = string.Empty;
