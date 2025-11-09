@@ -57,6 +57,14 @@
             "CsvHelper": {
               "target": "Package",
               "version": "[33.1.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.10, )"
             }
           },
           "imports": [

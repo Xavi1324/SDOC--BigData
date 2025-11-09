@@ -1,7 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SDOC.Application.Interfaces.IRepository;
+using SDOC.Domain.Entities.Api;
+using SDOC.Domain.Entities.csv;
+using SDOC.Domain.Entities.DB;
 using SDOC.Persitences.Context;
+using SDOC.Persitences.Repositories;
 
 namespace SDOC.Persitences
 {
@@ -16,6 +21,21 @@ namespace SDOC.Persitences
             // Contexto de destino (base de datos analítica OLAP)
             services.AddDbContext<OlapOpinionsContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("OlapDb")));
+
+            services.AddTransient<ICsvInternalSurveySourceRepository, CsvInternalSurveySourceRepository>();
+            services.AddTransient<IWebReviewSourceRepository, WebReviewSourceRepository>();
+            services.AddHttpClient<IApiSocialCommentSourceRepository, ApiSocialCommentSourceRepository>();
+                   
+
+            services.AddScoped<ISourceReader<SurveyCsv>>(sp =>
+                sp.GetRequiredService<ICsvInternalSurveySourceRepository>());
+
+            services.AddScoped<ISourceReader<WebReviewDB>>(sp =>
+                sp.GetRequiredService<IWebReviewSourceRepository>());
+
+
+            services.AddScoped<ISourceReader<SocialCommetsApi>>(sp =>
+                sp.GetRequiredService<IApiSocialCommentSourceRepository>());
         }
     }
 }

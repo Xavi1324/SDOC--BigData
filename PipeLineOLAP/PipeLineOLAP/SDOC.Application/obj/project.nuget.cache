@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "IvZ7vfoxZeE=",
+  "dgSpecHash": "Pggsd7FsArg=",
   "success": true,
   "projectFilePath": "C:\\Proyecto\\Sistema de Análisis de Opiniones de Clientes\\PipeLineOLAP\\PipeLineOLAP\\SDOC.Application\\SDOC.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\xavie\\.nuget\\packages\\csvhelper\\33.1.0\\csvhelper.33.1.0.nupkg.sha512"
+    "C:\\Users\\xavie\\.nuget\\packages\\csvhelper\\33.1.0\\csvhelper.33.1.0.nupkg.sha512",
+    "C:\\Users\\xavie\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.10\\microsoft.extensions.dependencyinjection.abstractions.9.0.10.nupkg.sha512",
+    "C:\\Users\\xavie\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.10\\microsoft.extensions.logging.abstractions.9.0.10.nupkg.sha512"
   ],
   "logs": []
 }

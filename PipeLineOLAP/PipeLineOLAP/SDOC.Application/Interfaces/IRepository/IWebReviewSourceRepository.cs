@@ -2,8 +2,7 @@
 
 namespace SDOC.Application.Interfaces.IRepository
 {
-    public interface IWebReviewSourceRepository
+    public interface IWebReviewSourceRepository : ISourceReader<WebReviewDB>
     {
-        Task<IReadOnlyList<WebReviewDB>> GetAllAsync();
     }
 }

@@ -8,10 +8,9 @@ public class OlapOpinionsContext : DbContext
 {
     public OlapOpinionsContext(DbContextOptions<OlapOpinionsContext> options) : base(options)
     {
-
+        
     }
 
-    
     public DbSet<DimClient> Clientes => Set<DimClient>();
     public DbSet<DimProduct> Productos => Set<DimProduct>();
     public DbSet<DimClass> Clasificaciones => Set<DimClass>();

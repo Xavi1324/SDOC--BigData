@@ -2,13 +2,15 @@
 
 namespace SDOC.Domain.Entities.csv
 {
-    public class SurveyCsv : BaseEntity<int>
+    public class SurveyCsv 
     {
-        public int IdClient { get; set; }
-        public int IdProduct { get; set; }
-        public string? Comment { get; set; }
-        public string Class { get; set; } = string.Empty;
-        public int SatisfactionScore { get; set; }
-        public string Source { get; set; } = string.Empty;
+        public int IdOpinion { get; set; }
+        public int IdCliente { get; set; }
+        public int IdProducto { get; set; }
+        public DateTime Fecha { get; set; }
+        public string Comentario { get; set; } = string.Empty;
+        public string Clasificación { get; set; } = string.Empty;
+        public int PuntajeSatisfacción { get; set; }
+        public string Fuente { get; set; } = string.Empty;
     }
 }

@@ -1,0 +1,16 @@
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Application\bin\Debug\net9.0\SDOC.Application.deps.json
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Application\bin\Debug\net9.0\SDOC.Application.dll
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Application\bin\Debug\net9.0\SDOC.Application.pdb
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Application\bin\Debug\net9.0\SDOC.Domain.dll
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Application\bin\Debug\net9.0\SDOC.Domain.pdb
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Application\obj\Debug\net9.0\SDOC.Application.csproj.AssemblyReference.cache
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Application\obj\Debug\net9.0\SDOC.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Application\obj\Debug\net9.0\SDOC.Application.AssemblyInfoInputs.cache
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Application\obj\Debug\net9.0\SDOC.Application.AssemblyInfo.cs
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Application\obj\Debug\net9.0\SDOC.Application.csproj.CoreCompileInputs.cache
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Application\obj\Debug\net9.0\SDOC.Application.sourcelink.json
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Application\obj\Debug\net9.0\SDOC.App.333A002A.Up2Date
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Application\obj\Debug\net9.0\SDOC.Application.dll
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Application\obj\Debug\net9.0\refint\SDOC.Application.dll
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Application\obj\Debug\net9.0\SDOC.Application.pdb
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Application\obj\Debug\net9.0\ref\SDOC.Application.dll
