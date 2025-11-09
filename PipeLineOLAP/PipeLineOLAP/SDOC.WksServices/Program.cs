@@ -1,5 +1,6 @@
 using SDOC.Application;
 using SDOC.Persitences;
+using SDOC.Shared;
 using SDOC.WksServices;
 
 internal class Program
@@ -9,6 +10,7 @@ internal class Program
         var builder = Host.CreateApplicationBuilder(args);
         builder.Services.AddPersistenceDependency(builder.Configuration);
         builder.Services.AddApplicationDependency();
+        builder.Services.AddSharedLayerIoc(builder.Configuration);
         builder.Services.AddHostedService<Worker>();
 
 

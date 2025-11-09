@@ -15,5 +15,6 @@
     <ProjectReference Include="..\SDOC.Application\SDOC.Application.csproj" />
     <ProjectReference Include="..\SDOC.Domain\SDOC.Domain.csproj" />
     <ProjectReference Include="..\SDOC.Persitences\SDOC.Persitences.csproj" />
+    <ProjectReference Include="..\SDOC.Shared\SDOC.Shared.csproj" />
   </ItemGroup>
 </Project>
