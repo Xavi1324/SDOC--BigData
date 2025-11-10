@@ -21,7 +21,8 @@ namespace SDOC.Persitences.Repositories
         {          
             try
             {
-                return await _context.WebReviews.AsNoTracking().Where(o => o.FuenteId == 1).ToListAsync();
+                return await _context.WebReviews.AsNoTracking().ToListAsync();
+                
             }
             catch (Exception ex)
             {

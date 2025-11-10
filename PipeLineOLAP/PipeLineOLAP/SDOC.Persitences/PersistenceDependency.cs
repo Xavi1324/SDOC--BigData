@@ -34,8 +34,9 @@ namespace SDOC.Persitences
                 sp.GetRequiredService<IWebReviewSourceRepository>());
 
 
-            services.AddScoped<ISourceReader<SocialCommetsApi>>(sp =>
-                sp.GetRequiredService<IApiSocialCommentSourceRepository>());
+            //services.AddScoped<ISourceReader<SocialCommetsApi>>(sp =>
+            //    sp.GetRequiredService<IApiSocialCommentSourceRepository>());
+            services.AddScoped<ISourceReader<SocialCommetsApi>, ApiSocialCommentSourceRepository>();
         }
     }
 }

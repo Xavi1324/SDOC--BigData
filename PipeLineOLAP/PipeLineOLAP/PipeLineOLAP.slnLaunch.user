@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "SDOC.WksServices\\SDOC.WksServices.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "SDOC.Api\\SDOC.Api.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

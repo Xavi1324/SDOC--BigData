@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "SDOC.Api.Controllers.SocialCommentsApiController",
+    "Method": "GetAll",
+    "RelativePath": "api/SocialCommentsApi/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

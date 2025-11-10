@@ -691,6 +691,9 @@
         }
       },
       "SDOC.Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.10"
+        },
         "runtime": {
           "SDOC.Domain.dll": {
             "assemblyVersion": "1.0.0.0",

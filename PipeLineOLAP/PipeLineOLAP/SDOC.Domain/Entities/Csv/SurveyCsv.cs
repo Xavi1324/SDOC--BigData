@@ -1,6 +1,4 @@
-﻿using SDOC.Domain.Base;
-
-namespace SDOC.Domain.Entities.csv
+﻿namespace SDOC.Domain.Entities.csv
 {
     public class SurveyCsv 
     {
