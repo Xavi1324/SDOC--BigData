@@ -11,82 +11,98 @@ public class OlapOpinionsContext : DbContext
         
     }
 
-    public DbSet<DimClient> Clientes => Set<DimClient>();
-    public DbSet<DimProduct> Productos => Set<DimProduct>();
-    public DbSet<DimClass> Clasificaciones => Set<DimClass>();
-    public DbSet<DimSource> Fuentes => Set<DimSource>();
-    public DbSet<DimTime> Tiempos => Set<DimTime>();
-    public DbSet<DimCategory> Categorias => Set<DimCategory>();
+    public DbSet<DimClient> DimClients => Set<DimClient>();
+    public DbSet<DimProduct> DimProducts => Set<DimProduct>();
+    public DbSet<DimClass> DimClasses => Set<DimClass>();
+    public DbSet<DimSource> DimSources => Set<DimSource>();
+    public DbSet<DimTime> DimTimes => Set<DimTime>();
+    public DbSet<DimCategory> DimCategories => Set<DimCategory>();
     public DbSet<FactOpinions> Opiniones => Set<FactOpinions>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // todas las tablas están bajo olap.
         modelBuilder.HasDefaultSchema("olap");
 
         modelBuilder.Entity<DimClient>(e =>
         {
             e.ToTable("Dim_Cliente");
             e.HasKey(x => x.ClientSK);
-        });
 
-        modelBuilder.Entity<DimProduct>(e =>
-        {
-            e.ToTable("Dim_Producto");
-            e.HasKey(x => x.ProductSK);
-        });
-
-        modelBuilder.Entity<DimClass>(e =>
-        {
-            e.ToTable("Dim_Clasificacion");
-            e.HasKey(x => x.ClassSk);
-        });
-
-        modelBuilder.Entity<DimSource>(e =>
-        {
-            e.ToTable("Dim_Fuente");
-            e.HasKey(x => x.SourceSK);
-        });
-
-        modelBuilder.Entity<DimTime>(e =>
-        {
-            e.ToTable("Dim_Tiempo");
-            e.HasKey(x => x.TimeSK);
+            e.Property(x => x.ClientSK).HasColumnName("Client_SK");
+            e.Property(x => x.ClientName).HasColumnName("ClientName");
+            e.Property(x => x.LastName).HasColumnName("LastName");
+            e.Property(x => x.Email).HasColumnName("Email");
+            e.Property(x => x.Country).HasColumnName("PaisNombre");
         });
 
         modelBuilder.Entity<DimCategory>(e =>
         {
             e.ToTable("Dim_Categoria");
             e.HasKey(x => x.CategorySK);
+
+            e.Property(x => x.CategorySK).HasColumnName("Categoria_SK");
+            e.Property(x => x.CategoryName).HasColumnName("Nombre");
         });
 
+        modelBuilder.Entity<DimProduct>(e =>
+        {
+            e.ToTable("Dim_Producto");
+            e.HasKey(x => x.ProductSK);
+
+            e.Property(x => x.ProductSK).HasColumnName("Product_SK");
+            e.Property(x => x.ProductName).HasColumnName("ProductName");
+            e.Property(x => x.CategorySK).HasColumnName("Categoria_SK");
+
+            e.HasOne(x => x.Category)
+                .WithMany(c => c.Products)
+                .HasForeignKey(x => x.CategorySK);
+        });
+
+        modelBuilder.Entity<DimSource>(e =>
+        {
+            e.ToTable("Dim_Fuente");
+            e.HasKey(x => x.SourceSK);
+
+            e.Property(x => x.SourceSK).HasColumnName("Fuente_SK");
+            e.Property(x => x.SourceName).HasColumnName("NombreFuente");
+            e.Property(x => x.SourceType).HasColumnName("TipoFuenteDesc");
+        });
+
+        modelBuilder.Entity<DimClass>(e =>
+        {
+            e.ToTable("Dim_Clasificacion");
+            e.HasKey(x => x.ClassSk);
+
+            e.Property(x => x.ClassSk).HasColumnName("Class_SK");
+            e.Property(x => x.ClassCode).HasColumnName("Class_Code");
+            e.Property(x => x.ClassName).HasColumnName("Class_Nombre");
+        });
+
+        modelBuilder.Entity<DimTime>(e =>
+        {
+            e.ToTable("Dim_Tiempo");
+            e.HasKey(x => x.TimeSK);
+
+            e.Property(x => x.TimeSK).HasColumnName("Time_SK");
+            e.Property(x => x.Date).HasColumnName("Date");
+            e.Property(x => x.Year).HasColumnName("Year");
+            e.Property(x => x.Month).HasColumnName("Month");
+            e.Property(x => x.MonthName).HasColumnName("MonthName");
+            e.Property(x => x.Day).HasColumnName("Day");
+            e.Property(x => x.DayName).HasColumnName("DayName");
+            e.Property(x => x.Quarter).HasColumnName("Quarter");
+            e.Property(x => x.WeekOfYear).HasColumnName("WeekOfYear");
+        });
+
+        // 🔹 Deja FactOpinions como keyless por ahora
         modelBuilder.Entity<FactOpinions>(e =>
         {
             e.ToTable("Fact_Opiniones");
-            e.HasKey(x => x.OpinionsSK); // o el PK que tengas
-
-            // FK -> dims (ajusta los nombres de columnas reales)
-            e.HasOne<DimClient>()
-                .WithMany()
-                .HasForeignKey(x => x.ClientSK);
-
-            e.HasOne<DimProduct>()
-                .WithMany()
-                .HasForeignKey(x => x.ProductSK);
-
-            e.HasOne<DimSource>()
-                .WithMany()
-                .HasForeignKey(x => x.SourceSK);
-
-            e.HasOne<DimClass>()
-                .WithMany()
-                .HasForeignKey(x => x.ClassSk);
-
-            e.HasOne<DimTime>()
-                .WithMany()
-                .HasForeignKey(x => x.TimeSK);
+            e.HasNoKey();
         });
 
         base.OnModelCreating(modelBuilder);
     }
+            
+    
 }

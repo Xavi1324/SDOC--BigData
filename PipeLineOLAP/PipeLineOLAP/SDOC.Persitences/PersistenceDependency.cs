@@ -24,8 +24,16 @@ namespace SDOC.Persitences
 
             services.AddTransient<ICsvInternalSurveySourceRepository, CsvInternalSurveySourceRepository>();
             services.AddTransient<IWebReviewSourceRepository, WebReviewSourceRepository>();
-            services.AddHttpClient<IApiSocialCommentSourceRepository, ApiSocialCommentSourceRepository>();
-                   
+
+
+            services.AddHttpClient();
+            // 👇 Registrar tu repo normalmente (usa IHttpClientFactory en el ctor)
+            services.AddTransient<IApiSocialCommentSourceRepository, ApiSocialCommentSourceRepository>();
+            
+            //services.AddHttpClient<IApiSocialCommentSourceRepository, ApiSocialCommentSourceRepository>();
+
+
+            services.AddTransient<IDwhRepository, DwhRepository>();
 
             services.AddScoped<ISourceReader<SurveyCsv>>(sp =>
                 sp.GetRequiredService<ICsvInternalSurveySourceRepository>());

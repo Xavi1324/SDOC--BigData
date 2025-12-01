@@ -1,6 +1,7 @@
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Domain\bin\Debug\net9.0\SDOC.Domain.deps.json
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Domain\bin\Debug\net9.0\SDOC.Domain.dll
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Domain\bin\Debug\net9.0\SDOC.Domain.pdb
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Domain\obj\Debug\net9.0\SDOC.Domain.csproj.AssemblyReference.cache
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Domain\obj\Debug\net9.0\SDOC.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Domain\obj\Debug\net9.0\SDOC.Domain.AssemblyInfoInputs.cache
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Domain\obj\Debug\net9.0\SDOC.Domain.AssemblyInfo.cs
@@ -10,4 +11,3 @@ C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineO
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Domain\obj\Debug\net9.0\refint\SDOC.Domain.dll
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Domain\obj\Debug\net9.0\SDOC.Domain.pdb
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Domain\obj\Debug\net9.0\ref\SDOC.Domain.dll
-C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Domain\obj\Debug\net9.0\SDOC.Domain.csproj.AssemblyReference.cache

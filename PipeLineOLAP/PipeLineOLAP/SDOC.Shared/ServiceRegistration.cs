@@ -16,6 +16,7 @@ namespace SDOC.Shared
 
             #region Services IOC
             services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<IErrorNotificationService, ErrorNotificationService>();
             #endregion
         }
     }

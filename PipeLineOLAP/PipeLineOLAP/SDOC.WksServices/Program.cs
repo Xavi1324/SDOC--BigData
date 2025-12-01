@@ -5,13 +5,14 @@ using SDOC.WksServices;
 
 internal class Program
 {
-    private static void Main(string[] args)
+    private static async Task Main(string[] args)
     {
         var builder = Host.CreateApplicationBuilder(args);
         builder.Services.AddPersistenceDependency(builder.Configuration);
         builder.Services.AddApplicationDependency();
         builder.Services.AddSharedLayerIoc(builder.Configuration);
         builder.Services.AddHostedService<Worker>();
+
 
 
         var host = builder.Build();

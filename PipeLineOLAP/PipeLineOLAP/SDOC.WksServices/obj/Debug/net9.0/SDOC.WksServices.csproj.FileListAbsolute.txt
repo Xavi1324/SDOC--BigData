@@ -89,9 +89,9 @@ C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineO
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.WksServices\bin\Debug\net9.0\SDOC.Persitences.dll
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.WksServices\bin\Debug\net9.0\SDOC.Shared.dll
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.WksServices\bin\Debug\net9.0\SDOC.Application.pdb
-C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.WksServices\bin\Debug\net9.0\SDOC.Domain.pdb
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.WksServices\bin\Debug\net9.0\SDOC.Persitences.pdb
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.WksServices\bin\Debug\net9.0\SDOC.Shared.pdb
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.WksServices\bin\Debug\net9.0\SDOC.Domain.pdb
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.WksServices\obj\Debug\net9.0\SDOC.WksServices.csproj.AssemblyReference.cache
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.WksServices\obj\Debug\net9.0\SDOC.WksServices.GeneratedMSBuildEditorConfig.editorconfig
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.WksServices\obj\Debug\net9.0\SDOC.WksServices.AssemblyInfoInputs.cache

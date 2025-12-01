@@ -1,8 +1,12 @@
 ﻿using Microsoft.Extensions.Logging;
-using SDOC.Application.Dto.Email;
+using SDOC.Application.Dto.DimDtos;
+using SDOC.Application.Dto.Sources;
 using SDOC.Application.Interfaces.IRepository;
 using SDOC.Application.Interfaces.IServices;
 using SDOC.Application.Result;
+using SDOC.Domain.Entities.Api;
+using SDOC.Domain.Entities.csv;
+using SDOC.Domain.Entities.DB;
 
 namespace SDOC.Application.Services
 {
@@ -11,29 +15,131 @@ namespace SDOC.Application.Services
         private readonly IApiSocialCommentSourceRepository _apiRepo;
         private readonly ICsvInternalSurveySourceRepository _csvRepo;
         private readonly IWebReviewSourceRepository _webRepo;
+        private readonly IDwhRepository _dwhRepository;
         private readonly ILogger<HandlerService> _logger;
-        private readonly IEmailService _emailService;
+        private readonly IErrorNotificationService _errorNotifier;
 
-        public HandlerService(  IApiSocialCommentSourceRepository apiRepo, ICsvInternalSurveySourceRepository csvRepo,
-                                IWebReviewSourceRepository webRepo, ILogger<HandlerService> logger,
-                                IEmailService emailService)
-
+        public HandlerService(
+            IApiSocialCommentSourceRepository apiRepo,
+            ICsvInternalSurveySourceRepository csvRepo,
+            IWebReviewSourceRepository webRepo,
+            IDwhRepository dwhRepository,
+            ILogger<HandlerService> logger,
+            IErrorNotificationService errorNotifier)
         {
             _apiRepo = apiRepo;
             _csvRepo = csvRepo;
             _webRepo = webRepo;
+            _dwhRepository = dwhRepository;
             _logger = logger;
-            _emailService = emailService;
+            _errorNotifier = errorNotifier;
         }
 
-        public  Task<ServiceResult> DataHandler()
+        public async Task<ServiceResult> DataHandler()
         {
-            
-            throw new NotImplementedException();
+            var result = new ServiceResult();
+
+            try
+            {
+                _logger.LogInformation("Iniciando proceso SDOC - lectura de fuentes...");
+
+                // 1) Leer las 3 fuentes usando el helper con notificación de error
+                IEnumerable<WebReviewDB> webReviewsEntities = await ExecuteWithErrorEmailAsync(
+                    () => _webRepo.ReadAsync(),
+                    sourceName: "WebReviews DB");
+
+                IEnumerable<SurveyCsv> surveysEntities = await ExecuteWithErrorEmailAsync(
+                    () => _csvRepo.ReadAsync(),
+                    sourceName: "Internal Survey CSV");
+
+                IEnumerable<SocialCommetsApi> socialCommentsEntities = await ExecuteWithErrorEmailAsync(
+                    () => _apiRepo.ReadAsync(),
+                    sourceName: "SocialComments API");
+
+                var webReviewDtos = webReviewsEntities
+                    .Select(w => new WebReviewDbDto
+                    {
+                        OpinionId = w.OpinionId,
+                        ProductId = w.ProductId,
+                        ClientId = w.ClientId,
+                        FuenteId = w.FuenteId,
+                        TimeId = w.TimeId,
+                        Comment = w.Comment,
+                        ClassId = w.ClassId
+                    })
+                    .ToList();
+
+                var surveyDtos = surveysEntities
+                    .Select(s => new SurveyCsvDto
+                    {
+                        IdOpinion = s.IdOpinion,
+                        IdCliente = s.IdCliente,
+                        IdProducto = s.IdProducto,
+                        Fecha = s.Fecha,
+                        Comentario = s.Comentario,
+                        Clasificacion = s.Clasificación,          
+                        PuntajeSatisfaccion = s.PuntajeSatisfacción,
+                        Fuente = s.Fuente
+                    })
+                    .ToList();
+
+                var socialCommentDtos = socialCommentsEntities
+                    .Select(sc => new SocialCommentApiDto
+                    {
+                        OpinionId = sc.OpinionId,
+                        ClientId = sc.IdClient,
+                        ProductId = sc.IdProduct,
+                        Source = sc.Source,
+                        Comment = sc.Comment
+                    })
+                    .ToList();
+
+                // 3) Construir DimDtos con DTOs (no con entidades)
+                var dimDtos = new DimDtos
+                {
+                    WebReviews = webReviewDtos,
+                    Surveys = surveyDtos,
+                    SocialComments = socialCommentDtos
+                };
+
+                _logger.LogInformation("Iniciando carga de dimensiones en el DWH...");
+
+                // 3) Mandar toda la data al DWH
+                result = await _dwhRepository.DimensionsLoader(dimDtos);
+
+                if (result.IsSuccess)
+                {
+                    _logger.LogInformation("Dimensiones cargadas correctamente en el DWH. Mensaje: {Message}", result.Message);
+                }
+                else
+                {
+                    _logger.LogError("Error al cargar dimensiones en el DWH: {Message}", result.Message);
+
+                    await _errorNotifier.NotifySourceErrorAsync(
+                        sourceName: "DWH Loader",
+                        errorMessage: result.Message);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error inesperado en DataHandler.");
+
+                result.IsSuccess = false;
+                result.Message = "Error procesando los datos de SDOC.";
+
+                await _errorNotifier.NotifySourceErrorAsync(
+                    sourceName: "DataHandler (Proceso completo)",
+                    errorMessage: ex.Message,
+                    exception: ex);
+            }
+
+            return result;
         }
 
-        private async Task<IEnumerable<T>> ExecuteWithErrorEmailAsync<T>(   Func<Task<IEnumerable<T>>> operation, 
-                                                                            string sourceName)
+        
+        private async Task<IEnumerable<T>> ExecuteWithErrorEmailAsync<T>(
+            Func<Task<IEnumerable<T>>> operation,
+            string sourceName)
         {
             try
             {
@@ -51,25 +157,13 @@ namespace SDOC.Application.Services
             {
                 _logger.LogError(ex, "Error al leer datos desde la fuente {SourceName}.", sourceName);
 
-                var email = new EmailRequestDto
-                {
-                    To = "hermesbankingrd@gmail.com", 
-                    Subject = $"[SDOC] Error al leer datos desde {sourceName}",
-                    HtmlBody = $@"
-                            <h2>Error en proceso SDOC</h2>
-                            <p><strong>Fuente:</strong> {sourceName}</p>
-                            <p><strong>Mensaje:</strong> {ex.Message}</p>
-                            <p><strong>Tipo:</strong> {ex.GetType().Name}</p>
-                            <p><strong>Fecha:</strong> {DateTime.Now:yyyy-MM-dd HH:mm:ss}</p>
-                            <pre>{ex}</pre>"
-                };
+                await _errorNotifier.NotifySourceErrorAsync(
+                    sourceName: sourceName,
+                    errorMessage: ex.Message,
+                    exception: ex);
 
-                await _emailService.SendAsync(email);
-
-                
                 throw;
             }
         }
-
     }
 }

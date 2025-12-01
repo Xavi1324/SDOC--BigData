@@ -73,6 +73,7 @@ C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineO
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Api\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Api\obj\Debug\net9.0\staticwebassets.development.json
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Api\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Api\obj\Debug\net9.0\swae.build.ex.cache
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Api\obj\Debug\net9.0\SDOC.Api.csproj.Up2Date
 C:\Proyecto\Sistema de Análisis de Opiniones de Clientes\PipeLineOLAP\PipeLineOLAP\SDOC.Api\obj\Debug\net9.0\SDOC.Api.dll
