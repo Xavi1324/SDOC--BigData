@@ -4,6 +4,7 @@
     public class WebReviewDB 
     {
         public long  OpinionId { get; set; }
+
         public int ProductId { get; set; }
         public int? ClientId { get; set; }
         public int FuenteId { get; set; }

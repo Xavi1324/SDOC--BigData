@@ -14,14 +14,12 @@ namespace SDOC.Persitences.Repositories
     {
         private readonly OlapOpinionsContext _context;
         private readonly ILogger<DwhRepository> _logger;
-        private readonly IEmailService _emailService;
         private readonly IErrorNotificationService _errorNotificationService;
 
-        public DwhRepository(OlapOpinionsContext context, ILogger<DwhRepository> logger, IEmailService emailService, IErrorNotificationService errorNotificationService)
+        public DwhRepository(OlapOpinionsContext context, ILogger<DwhRepository> logger, IErrorNotificationService errorNotificationService)
         {
             _context = context;
             _logger = logger;
-            _emailService = emailService;
             _errorNotificationService = errorNotificationService;
         }
 
@@ -64,7 +62,7 @@ namespace SDOC.Persitences.Repositories
                 await _context.DimTimes.AddRangeAsync(times);
 
                 
-
+                
                 var defaultCategory = new DimCategory
                 {
                     CategoryName = "Default"
@@ -157,19 +155,36 @@ namespace SDOC.Persitences.Repositories
                     .Select(s => s.Clasificacion?.Trim())
                     .Where(c => !string.IsNullOrEmpty(c))
                     .Distinct()
-                    .Select(text => new DimClass
+                    .Select(text =>
                     {
-                        ClassCode = BuildClassCode(text!),  // 🔹 transformación aquí
-                        ClassName = text!                   // nombre completo amigable
+                        
+                        var code = BuildClassCode(text!);
+                                                
+                        return new DimClass
+                        {
+                            ClassCode = code,
+                            ClassName = code
+                        };
                     });
 
                 var classesFromWeb = webReviews
                     .Select(w => w.ClassId)
                     .Distinct()
-                    .Select(id => new DimClass
+                    .Select(id =>
                     {
-                        ClassCode = id.ToString(),    // Ej: "1", "2", "3"
-                        ClassName = $"Class {id}"
+                        string code = id switch
+                        {
+                            1 => "NEU",
+                            2 => "NEG",
+                            3 => "POS",
+                            _ => "UNK"
+                        };
+
+                        return new DimClass
+                        {
+                            ClassCode = code,
+                            ClassName = code
+                        };
                     });
 
                 var allClasses = classesFromSurvey
