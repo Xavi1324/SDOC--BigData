@@ -77,7 +77,7 @@ namespace SDOC.Persitences.Repositories
                     .ToList();
 
                 await _context.DimCategories.AddRangeAsync(dimCategories);
-                await _context.SaveChangesAsync(); // para que tengan SK
+                await _context.SaveChangesAsync(); 
                 var productRows = webReviews
                     .Select(w => new
                     {
@@ -92,11 +92,11 @@ namespace SDOC.Persitences.Repositories
                     .Distinct()
                     .ToList();
 
-                // 🔹 Lookup CategoríaNombre -> CategorySK
+                
                 var categoryLookup = await _context.DimCategories
                     .ToDictionaryAsync(c => c.CategoryName, c => c.CategorySK);
 
-                // 🔹 Construimos la lista de DimProduct en memoria
+                
                 var dimProducts = productRows
                     .Select(p =>
                     {
@@ -105,7 +105,7 @@ namespace SDOC.Persitences.Repositories
                         return new DimProduct
                         {
                             ProductName = p.ProductName,
-                            CategorySK = catSk  // 0 si no encontró; puedes poner un default si quieres
+                            CategorySK = catSk  
                         };
                     })
                     .ToList();
@@ -150,7 +150,7 @@ namespace SDOC.Persitences.Repositories
                         SourceType = "Survey"
                     });
 
-                // Social
+                
                 var sourcesFromSocial = socialComments
                     .Select(s => s.Source?.Trim())
                     .Where(s => !string.IsNullOrEmpty(s))
@@ -160,7 +160,7 @@ namespace SDOC.Persitences.Repositories
                         SourceType = "Social"
                     });
 
-                // WebReviews (usando nombres reales de la vista)
+                
                 var sourcesFromWeb = webReviews
                     .Select(w => new
                     {
@@ -285,7 +285,7 @@ namespace SDOC.Persitences.Repositories
         private static string BuildClassCode(string rawText)
         {
             if (string.IsNullOrWhiteSpace(rawText))
-                return "UNK"; // Unknown
+                return "UNK"; 
 
             var t = rawText.Trim().ToLowerInvariant();
 

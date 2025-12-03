@@ -27,10 +27,9 @@ namespace SDOC.Persitences
 
 
             services.AddHttpClient();
-            // 👇 Registrar tu repo normalmente (usa IHttpClientFactory en el ctor)
+            
             services.AddTransient<IApiSocialCommentSourceRepository, ApiSocialCommentSourceRepository>();
             
-            //services.AddHttpClient<IApiSocialCommentSourceRepository, ApiSocialCommentSourceRepository>();
 
 
             services.AddTransient<IDwhRepository, DwhRepository>();
@@ -42,8 +41,7 @@ namespace SDOC.Persitences
                 sp.GetRequiredService<IWebReviewSourceRepository>());
 
 
-            //services.AddScoped<ISourceReader<SocialCommetsApi>>(sp =>
-            //    sp.GetRequiredService<IApiSocialCommentSourceRepository>());
+            
             services.AddScoped<ISourceReader<SocialCommetsApi>, ApiSocialCommentSourceRepository>();
         }
     }

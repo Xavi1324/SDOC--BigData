@@ -43,7 +43,7 @@ namespace SDOC.Application.Services
             {
                 _logger.LogInformation("Iniciando proceso SDOC - lectura de fuentes...");
 
-                // 1) Leer las 3 fuentes usando el helper con notificación de error
+                
                 IEnumerable<WebReviewDB> webReviewsEntities = await ExecuteWithErrorEmailAsync(
                     () => _webRepo.ReadAsync(),
                     sourceName: "WebReviews DB");
@@ -67,7 +67,6 @@ namespace SDOC.Application.Services
                         Comment = w.Comment ?? string.Empty,
                         ClassId = w.ClassId,
 
-                        // 🔹 Nuevos mapeos
                         ProductName = w.ProductName ?? $"Producto {w.ProductId}",
                         CategoryId = w.CategoryId,
                         CategoryName = w.CategoryName ?? "Sin categoría",
@@ -110,7 +109,7 @@ namespace SDOC.Application.Services
                     })
                     .ToList();
 
-                // 3) Construir DimDtos con DTOs (no con entidades)
+                
                 var dimDtos = new DimDtos
                 {
                     WebReviews = webReviewDtos,
@@ -120,7 +119,7 @@ namespace SDOC.Application.Services
 
                 _logger.LogInformation("Iniciando carga de dimensiones en el DWH...");
 
-                // 3) Mandar toda la data al DWH
+               
                 result = await _dwhRepository.DimensionsLoader(dimDtos);
 
                 if (result.IsSuccess)
