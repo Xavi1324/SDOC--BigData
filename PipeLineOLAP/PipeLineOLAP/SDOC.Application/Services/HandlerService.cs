@@ -64,10 +64,26 @@ namespace SDOC.Application.Services
                         ClientId = w.ClientId,
                         FuenteId = w.FuenteId,
                         TimeId = w.TimeId,
-                        Comment = w.Comment,
-                        ClassId = w.ClassId
+                        Comment = w.Comment ?? string.Empty,
+                        ClassId = w.ClassId,
+
+                        // 🔹 Nuevos mapeos
+                        ProductName = w.ProductName ?? $"Producto {w.ProductId}",
+                        CategoryId = w.CategoryId,
+                        CategoryName = w.CategoryName ?? "Sin categoría",
+
+                        ClientName = w.ClientName ?? $"Cliente {w.ClientId ?? 0}",
+                        LastName = w.LastName ?? string.Empty,
+                        Email = w.Email ?? string.Empty,
+
+                        FuenteNombre = w.FuenteNombre ?? $"Fuente {w.FuenteId}",
+                        TipoFuenteDesc = w.TipoFuenteDesc ?? "Desconocido",
+
+                        Fecha = w.Fecha,
+                        ClassCode = w.ClassCode ?? string.Empty
                     })
                     .ToList();
+
 
                 var surveyDtos = surveysEntities
                     .Select(s => new SurveyCsvDto

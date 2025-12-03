@@ -61,83 +61,121 @@ namespace SDOC.Persitences.Repositories
 
                 await _context.DimTimes.AddRangeAsync(times);
 
-                
-                
-                var defaultCategory = new DimCategory
-                {
-                    CategoryName = "Default"
-                };
 
-                await _context.DimCategories.AddAsync(defaultCategory);
-                await _context.SaveChangesAsync();
-                var productIds = webReviews
-                    .Select(w => w.ProductId)
-                    .Concat(surveys.Select(s => s.IdProducto))
-                    .Concat(socialComments.Select(sc => sc.ProductId))
+
+                var categoryNames = webReviews
+                    .Where(w => !string.IsNullOrWhiteSpace(w.CategoryName))
+                    .Select(w => w.CategoryName!.Trim())
                     .Distinct()
                     .ToList();
 
-                var products = productIds
-                    .Select(id => new DimProduct
+                var dimCategories = categoryNames
+                    .Select(name => new DimCategory
                     {
-                        ProductName = $"Product {id}",  
-                        CategorySK = defaultCategory.CategorySK
+                        CategoryName = name
                     })
                     .ToList();
 
-                await _context.DimProducts.AddRangeAsync(products);
-
-                
-                var clientIds = webReviews
-                    .Select(w => w.ClientId)
-                    .Concat(surveys.Select(s => (int?)s.IdCliente))
-                    .Concat(socialComments.Select(sc => sc.ClientId))
-                    .Where(c => c.HasValue)
-                    .Select(c => c!.Value)
+                await _context.DimCategories.AddRangeAsync(dimCategories);
+                await _context.SaveChangesAsync(); // para que tengan SK
+                var productRows = webReviews
+                    .Select(w => new
+                    {
+                        w.ProductId,
+                        ProductName = string.IsNullOrWhiteSpace(w.ProductName)
+                                        ? $"Producto {w.ProductId}"
+                                        : w.ProductName!.Trim(),
+                        CategoryName = string.IsNullOrWhiteSpace(w.CategoryName)
+                                        ? "Sin categoría"
+                                        : w.CategoryName!.Trim()
+                    })
                     .Distinct()
                     .ToList();
 
-                var clients = clientIds
-                    .Select(id => new DimClient
+                // 🔹 Lookup CategoríaNombre -> CategorySK
+                var categoryLookup = await _context.DimCategories
+                    .ToDictionaryAsync(c => c.CategoryName, c => c.CategorySK);
+
+                // 🔹 Construimos la lista de DimProduct en memoria
+                var dimProducts = productRows
+                    .Select(p =>
                     {
-                        ClientName = $"Client {id}",
-                        LastName = string.Empty,
-                        Email = string.Empty,
+                        categoryLookup.TryGetValue(p.CategoryName, out var catSk);
+
+                        return new DimProduct
+                        {
+                            ProductName = p.ProductName,
+                            CategorySK = catSk  // 0 si no encontró; puedes poner un default si quieres
+                        };
+                    })
+                    .ToList();
+
+                await _context.DimProducts.AddRangeAsync(dimProducts);
+
+
+                var clientRows = webReviews
+                    .Where(w => w.ClientId.HasValue)
+                    .Select(w => new
+                    {
+                        Id = w.ClientId!.Value,
+                        Name = string.IsNullOrWhiteSpace(w.ClientName)
+                                    ? $"Cliente {w.ClientId}"
+                                    : w.ClientName!.Trim(),
+                        Last = w.LastName ?? string.Empty,
+                        Email = w.Email ?? string.Empty
+                    })
+                    .Distinct()
+                    .ToList();
+
+                var dimClients = clientRows
+                    .Select(c => new DimClient
+                    {
+                        ClientName = c.Name,
+                        LastName = c.Last,
+                        Email = c.Email,
                         Country = string.Empty
                     })
                     .ToList();
 
-                await _context.DimClients.AddRangeAsync(clients);
+                await _context.DimClients.AddRangeAsync(dimClients);
 
-                
+
 
                 var sourcesFromSurvey = surveys
                     .Select(s => s.Fuente?.Trim())
                     .Where(s => !string.IsNullOrEmpty(s))
-                    .Distinct()
                     .Select(name => new DimSource
                     {
                         SourceName = name!,
                         SourceType = "Survey"
                     });
 
+                // Social
                 var sourcesFromSocial = socialComments
                     .Select(s => s.Source?.Trim())
                     .Where(s => !string.IsNullOrEmpty(s))
-                    .Distinct()
                     .Select(name => new DimSource
                     {
                         SourceName = name!,
                         SourceType = "Social"
                     });
 
+                // WebReviews (usando nombres reales de la vista)
                 var sourcesFromWeb = webReviews
-                    .Select(w => w.FuenteId)
-                    .Distinct()
-                    .Select(id => new DimSource
+                    .Select(w => new
                     {
-                        SourceName = $"Source {id}",
-                        SourceType = "WebReview"
+                        Name = string.IsNullOrWhiteSpace(w.FuenteNombre)
+                            ? $"Source {w.FuenteId}"
+                            : w.FuenteNombre!.Trim(),
+                        Type = string.IsNullOrWhiteSpace(w.TipoFuenteDesc)
+                            ? "WebReview"
+                            : w.TipoFuenteDesc!.Trim()
+                    })
+                    .Distinct()
+                    .Select(x => new DimSource
+                    {
+                        SourceName = x.Name,
+                        SourceType = x.Type
                     });
 
                 var allSources = sourcesFromSurvey

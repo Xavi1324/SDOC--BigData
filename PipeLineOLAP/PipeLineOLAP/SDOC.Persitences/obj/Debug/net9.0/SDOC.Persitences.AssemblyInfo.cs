@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SDOC.Persitences")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0558b200d6863a326ba9b71d01fad777152a603e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c358112e992eaacdbd3b93443ac80601898aa60")]
 [assembly: System.Reflection.AssemblyProductAttribute("SDOC.Persitences")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SDOC.Persitences")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
