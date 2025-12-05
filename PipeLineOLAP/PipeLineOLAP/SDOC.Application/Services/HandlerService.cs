@@ -43,18 +43,15 @@ namespace SDOC.Application.Services
             {
                 _logger.LogInformation("Iniciando proceso SDOC - lectura de fuentes...");
 
-                
-                IEnumerable<WebReviewDB> webReviewsEntities = await ExecuteWithErrorEmailAsync(
-                    () => _webRepo.ReadAsync(),
-                    sourceName: "WebReviews DB");
 
-                IEnumerable<SurveyCsv> surveysEntities = await ExecuteWithErrorEmailAsync(
-                    () => _csvRepo.ReadAsync(),
-                    sourceName: "Internal Survey CSV");
+                var webReviewsEntities = await ExecuteWithErrorEmailAsync(
+            () => _webRepo.ReadAsync(), "WebReviews DB");
 
-                IEnumerable<SocialCommetsApi> socialCommentsEntities = await ExecuteWithErrorEmailAsync(
-                    () => _apiRepo.ReadAsync(),
-                    sourceName: "SocialComments API");
+                var surveysEntities = await ExecuteWithErrorEmailAsync(
+                    () => _csvRepo.ReadAsync(), "Internal Survey CSV");
+
+                var socialCommentsEntities = await ExecuteWithErrorEmailAsync(
+                    () => _apiRepo.ReadAsync(), "SocialComments API");
 
                 var webReviewDtos = webReviewsEntities
                     .Select(w => new WebReviewDbDto
@@ -119,8 +116,8 @@ namespace SDOC.Application.Services
 
                 _logger.LogInformation("Iniciando carga de dimensiones en el DWH...");
 
-               
-                result = await _dwhRepository.DimensionsLoader(dimDtos);
+
+                result = await CargarDwhAsync(dimDtos);
 
                 if (result.IsSuccess)
                 {
@@ -150,8 +147,17 @@ namespace SDOC.Application.Services
 
             return result;
         }
+        private async Task<ServiceResult> CargarDwhAsync(DimDtos dimDtos)
+        {
+            var dimResult = await _dwhRepository.DimensionsLoader(dimDtos);
+            if (!dimResult.IsSuccess)
+                return dimResult;
 
-        
+            var factResult = await _dwhRepository.FactLoader(dimDtos);
+            return factResult;
+        }
+
+
         private async Task<IEnumerable<T>> ExecuteWithErrorEmailAsync<T>(
             Func<Task<IEnumerable<T>>> operation,
             string sourceName)

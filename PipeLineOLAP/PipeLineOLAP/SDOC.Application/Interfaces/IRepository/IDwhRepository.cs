@@ -6,5 +6,6 @@ namespace SDOC.Application.Interfaces.IRepository
     public interface IDwhRepository
     {
         Task<ServiceResult> DimensionsLoader(DimDtos dimDtos);
+        Task<ServiceResult> FactLoader(DimDtos dimDtos);
     }
 }

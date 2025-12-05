@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SDOC.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c358112e992eaacdbd3b93443ac80601898aa60")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d31da470d90629805ce6d8c364c77f5e571035ac")]
 [assembly: System.Reflection.AssemblyProductAttribute("SDOC.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SDOC.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -98,7 +98,7 @@ public class OlapOpinionsContext : DbContext
         modelBuilder.Entity<FactOpinions>(e =>
         {
             e.ToTable("Fact_Opiniones");
-            e.HasNoKey();
+            e.HasKey(f => f.OpinionsSK);
         });
 
         base.OnModelCreating(modelBuilder);

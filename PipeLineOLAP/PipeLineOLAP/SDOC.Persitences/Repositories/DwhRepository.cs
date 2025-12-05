@@ -5,8 +5,10 @@ using SDOC.Application.Interfaces.IRepository;
 using SDOC.Application.Interfaces.IServices;
 using SDOC.Application.Result;
 using SDOC.Domain.Entities.Dwh.Dimensions;
+using SDOC.Domain.Entities.Dwh.Facts;
 using SDOC.Persitences.Context;
 using System.Globalization;
+using System.Linq;
 
 namespace SDOC.Persitences.Repositories
 {
@@ -39,10 +41,17 @@ namespace SDOC.Persitences.Repositories
                 var surveys = dimDtos.Surveys;
                 var socialComments = dimDtos.SocialComments;
 
-                
-                var times = surveys
-                    .Select(s => s.Fecha.Date)
+
+                var timeDates = webReviews
+                    .Select(w => w.Fecha.Date)
+                    .Concat(surveys
+                    .Select(s => s.Fecha.Date))
+                    .Concat(socialComments
+                    .Select(sc => sc.Date.Date))
                     .Distinct()
+                    .ToList();
+
+                var times = timeDates
                     .Select(d => new DimTime
                     {
                         TimeSK = int.Parse(d.ToString("yyyyMMdd")),
@@ -256,12 +265,235 @@ namespace SDOC.Persitences.Repositories
 
         }
 
+        public async Task<ServiceResult> FactLoader(DimDtos dimDtos)
+        {
+            var result = new ServiceResult();
+
+            try
+            {
+                var webReviews = dimDtos.WebReviews;
+                var surveys = dimDtos.Surveys;
+                var socialComments = dimDtos.SocialComments;
+
+                // 1) Limpiar tabla de hechos
+                await _context.Opiniones.ExecuteDeleteAsync();
+                await _context.SaveChangesAsync();
+
+                // =====================================================================
+                // 2) LOOKUPS DE DIMENSIONES
+                // =====================================================================
+
+                var timeLookup = await _context.DimTimes
+                    .AsNoTracking()
+                    .ToDictionaryAsync(t => t.Date.Date, t => t.TimeSK);
+
+                // mismo criterio de nombre de producto que en DimensionsLoader
+                var productNameById = webReviews
+                    .Select(w => new
+                    {
+                        w.ProductId,
+                        ProductName = string.IsNullOrWhiteSpace(w.ProductName)
+                            ? $"Producto {w.ProductId}"
+                            : w.ProductName!.Trim()
+                    })
+                    .Distinct()
+                    .ToDictionary(x => x.ProductId, x => x.ProductName);
+
+                var productLookup = await _context.DimProducts
+                    .AsNoTracking()
+                    .ToDictionaryAsync(p => p.ProductName, p => p.ProductSK);
+
+                // mismo criterio de nombre de cliente que en DimensionsLoader
+                var clientNameById = webReviews
+                    .Where(w => w.ClientId.HasValue)
+                    .Select(w => new
+                    {
+                        Id = w.ClientId!.Value,
+                        Name = string.IsNullOrWhiteSpace(w.ClientName)
+                            ? $"Cliente {w.ClientId}"
+                            : w.ClientName!.Trim()
+                    })
+                    .Distinct()
+                    .ToDictionary(x => x.Id, x => x.Name);
+
+                var clientLookup = await _context.DimClients
+                    .AsNoTracking()
+                    .ToDictionaryAsync(c => c.ClientName, c => c.ClientSK);
+
+                // sources separados por tipo
+                var allSources = await _context.DimSources
+                    .AsNoTracking()
+                    .ToListAsync();
+
+                var sourceSurveyLookup = allSources
+                    .Where(s => s.SourceType == "Survey")
+                    .ToDictionary(s => s.SourceName, s => s.SourceSK);
+
+                var sourceSocialLookup = allSources
+                    .Where(s => s.SourceType == "Social")
+                    .ToDictionary(s => s.SourceName, s => s.SourceSK);
+
+                var sourceWebLookup = allSources
+                    .Where(s => s.SourceType == "WebReview")
+                    .ToDictionary(s => s.SourceName, s => s.SourceSK);
+
+                var classLookup = await _context.DimClasses
+                    .AsNoTracking()
+                    .ToDictionaryAsync(c => c.ClassCode, c => c.ClassSk);
+
+                // =====================================================================
+                // 3) PROYECCIONES A FACT (SIN for / foreach)
+                // =====================================================================
+
+                // ---------- WEB REVIEWS ----------
+                var factsFromWeb = webReviews
+                    .Select(w => new
+                    {
+                        W = w,
+                        Date = w.Fecha.Date,
+                        ProductId = w.ProductId,
+                        ClientId = w.ClientId,
+                        SourceName = string.IsNullOrWhiteSpace(w.FuenteNombre)
+                                        ? $"Source {w.FuenteId}"
+                                        : w.FuenteNombre!.Trim(),
+                        ClassCode = w.ClassId switch
+                        {
+                            1 => "NEU",
+                            2 => "NEG",
+                            3 => "POS",
+                            _ => "UNK"
+                        }
+                    })
+                    .Where(x =>
+                           timeLookup.ContainsKey(x.Date)
+                        && productNameById.ContainsKey(x.ProductId)
+                        && x.ClientId.HasValue
+                        && clientNameById.ContainsKey(x.ClientId.Value)
+                        && sourceWebLookup.ContainsKey(x.SourceName)
+                        && classLookup.ContainsKey(x.ClassCode))
+                    .Select(x =>
+                    {
+                        var productName = productNameById[x.ProductId];
+                        var clientName = clientNameById[x.ClientId!.Value];
+
+                        return new FactOpinions
+                        {
+                            TimeSK = timeLookup[x.Date],
+                            ProductSK = productLookup[productName],
+                            ClientSK = clientLookup[clientName],
+                            SourceSK = sourceWebLookup[x.SourceName],
+                            ClassSk = (short)classLookup[x.ClassCode],
+                            SatisfactionScore = 0
+                        };
+                    });
+
+                // ---------- SURVEYS ----------
+                var factsFromSurveys = surveys
+                    .Select(s => new
+                    {
+                        S = s,
+                        Date = s.Fecha.Date,
+                        ProductId = s.IdProducto,
+                        ClientId = s.IdCliente,
+                        SourceName = (s.Fuente ?? string.Empty).Trim(),
+                        ClassCode = BuildClassCode(s.Clasificacion ?? string.Empty)
+                    })
+                    .Where(x =>
+                           timeLookup.ContainsKey(x.Date)
+                        && productNameById.ContainsKey(x.ProductId)
+                        && clientNameById.ContainsKey(x.ClientId)
+                        && sourceSurveyLookup.ContainsKey(x.SourceName)
+                        && classLookup.ContainsKey(x.ClassCode))
+                    .Select(x =>
+                    {
+                        var productName = productNameById[x.ProductId];
+                        var clientName = clientNameById[x.ClientId];
+
+                        return new FactOpinions
+                        {
+                            TimeSK = timeLookup[x.Date],
+                            ProductSK = productLookup[productName],
+                            ClientSK = clientLookup[clientName],
+                            SourceSK = sourceSurveyLookup[x.SourceName],
+                            ClassSk = (short)classLookup[x.ClassCode],
+                            SatisfactionScore = (short)x.S.PuntajeSatisfaccion
+                        };
+                    });
+
+                // ---------- SOCIAL COMMENTS ----------
+                var factsFromSocial = socialComments
+                    .Select(sc => new
+                    {
+                        SC = sc,
+                        Date = sc.Date.Date,
+                        ProductId = sc.ProductId,
+                        ClientId = sc.ClientId,
+                        SourceName = (sc.Source ?? string.Empty).Trim(),
+                        ClassCode = BuildClassCode(sc.ClassCode ?? string.Empty)
+                    })
+                    .Where(x =>
+                           timeLookup.ContainsKey(x.Date)
+                        && productNameById.ContainsKey(x.ProductId)
+                        && x.ClientId.HasValue
+                        && clientNameById.ContainsKey(x.ClientId.Value)
+                        && sourceSocialLookup.ContainsKey(x.SourceName)
+                        && classLookup.ContainsKey(x.ClassCode))
+                    .Select(x =>
+                    {
+                        var productName = productNameById[x.ProductId];
+                        var clientName = clientNameById[x.ClientId!.Value];
+
+                        return new FactOpinions
+                        {
+                            TimeSK = timeLookup[x.Date],
+                            ProductSK = productLookup[productName],
+                            ClientSK = clientLookup[clientName],
+                            SourceSK = sourceSocialLookup[x.SourceName],
+                            ClassSk = (short)classLookup[x.ClassCode],
+                            SatisfactionScore = 0
+                        };
+                    });
+
+                // =====================================================================
+                // 4) UNIR TODO Y GUARDAR
+                // =====================================================================
+
+                var allFacts = factsFromWeb
+                    .Concat(factsFromSurveys)
+                    .Concat(factsFromSocial)
+                    .ToList();
+
+                if (allFacts.Any())
+                {
+                    await _context.Opiniones.AddRangeAsync(allFacts);
+                    await _context.SaveChangesAsync();
+                }
+
+                result.IsSuccess = true;
+                result.Message = $"Hechos cargados correctamente. Total: {allFacts.Count}.";
+            }
+            catch (Exception ex)
+            {
+                var msg = "Error cargando los hechos del DWH SDOC";
+                _logger.LogError(ex, msg);
+                result.IsSuccess = false;
+
+                await _errorNotificationService.NotifySourceErrorAsync(
+                    sourceName: "DWH Fact Loader",
+                    errorMessage: msg,
+                    exception: ex);
+            }
+
+            return result;
+        }
+
         private async Task<ServiceResult> CleanDimensionTables()
         {
             var result = new ServiceResult();
 
             try
             {
+                await _context.Opiniones.ExecuteDeleteAsync();
                 await _context.DimProducts.ExecuteDeleteAsync();
                 await _context.DimCategories.ExecuteDeleteAsync();
                 await _context.DimClients.ExecuteDeleteAsync();
@@ -282,6 +514,7 @@ namespace SDOC.Persitences.Repositories
 
             return result;
         }
+             
         private static string BuildClassCode(string rawText)
         {
             if (string.IsNullOrWhiteSpace(rawText))
@@ -305,5 +538,6 @@ namespace SDOC.Persitences.Repositories
             };
         }
 
+        
     }
 }

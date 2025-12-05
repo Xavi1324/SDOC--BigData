@@ -21,5 +21,8 @@
 
         // ===== CLASIFICACIÓN (si luego agregas NLP) =====
         public string? ClassCode { get; set; }
+
+        public DateTime Date { get; set; }
+
     }
 }

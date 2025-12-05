@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SDOC.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a87c590e363d8b4d9c16a2ff7e1e7778c69af131")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d31da470d90629805ce6d8c364c77f5e571035ac")]
 [assembly: System.Reflection.AssemblyProductAttribute("SDOC.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SDOC.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
